@@ -6,7 +6,6 @@ local oriole = {
 
 local actions = require('oriole.actions')
 
-
 function oriole:tests()
     gui.prev_window = vim.api.nvim_get_current_win()
     print(gui.prev_window)
@@ -15,12 +14,7 @@ function oriole:tests()
   gui:create_prompt()
   gui:create_autocmd()
  -- do below somewhere else
-    database:index_buffers()
-    local lines =  database:gen_line_array()
-    for index,value in ipairs(lines) do 
-        vim.api.nvim_buf_set_lines(gui.main_buf,index-1,index,false,{value.line})  -- index can be got here from row value of highlight
-        vim.api.nvim_buf_add_highlight(gui.main_buf,gui.ns_id,value.highlight.highlight_group,value.highlight.row,value.highlight.col,value.highlight.col+ 1)
-    end
+    actions.reload() 
    vim.keymap.set('n','k',function ()
    actions.moveCursorUp()
    end
@@ -31,6 +25,10 @@ function oriole:tests()
    ,{buffer= gui.prompt_buf})
    vim.keymap.set('n','<CR>',function ()
    actions.openBuffer()
+   end
+   ,{buffer= gui.prompt_buf})
+   vim.keymap.set('n','d',function ()
+   actions.saveAndClose()
    end
    ,{buffer= gui.prompt_buf})
 end

@@ -43,5 +43,4 @@ end
     end
     return database.lines
 end
-
 return database
