@@ -6,3 +6,4 @@
   - keep window when delete buffer ( replace with any open buffer )
   - maybe window management feature ?
   - grep implementation to find buffers
+  - asthetic revamp ? add sign column ig 
