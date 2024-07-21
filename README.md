@@ -5,6 +5,6 @@
   - split windows ( horizontally and vertically ) while opening specific buffers in it aswell
   - keep window when delete buffer ( replace with any open buffer )
   - maybe window management feature ?
-  - grep implementation to find buffers
+  - fuzzy finder
   - asthetic revamp ? add sign column ig
   - close on enter (open buffer in current window and close)
