@@ -7,4 +7,3 @@
   - maybe window management feature ?
   - fuzzy finder
   - asthetic revamp ? add sign column ig
-  - close on enter (open buffer in current window and close)
